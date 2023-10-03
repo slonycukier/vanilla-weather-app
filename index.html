@@ -15,29 +15,63 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-9">
-          <input class="search" />
+      <div class="weather-total">
+        <div class="weather-app">
+          <div class="border">
+            <div class="box-1">
+              <div class="row">
+                <div class="col-9">
+                  <input class="search" />
+                </div>
+                <div class="col-3">
+                  <button class="btn btn-success">Search</button>
+                </div>
+              </div>
+            </div>
+            <div class="box-2">
+              <h1>Turin</h1>
+              <ul>
+                <li>Tuesday, 03/10/2023 3:08 pm</li>
+                <li>Cloudy</li>
+              </ul>
+              <div class="row">
+                <div class="col-3"><img src="#" alt="Icon" /></div>
+                <div class="col-3">25°C</div>
+                <div class="col-6">
+                  <ul>
+                    <li>Humidity: 55%</li>
+                    <li>Wind: 1km/h</li>
+                    <li>Precipitation: 17%</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="box-3">
+              <div class="row">
+                <div class="col">Wed</div>
+                <div class="col">Thu</div>
+                <div class="col">Fri</div>
+                <div class="col">Sat</div>
+                <div class="col">Sun</div>
+              </div>
+              <div class="row" id="emoji">
+                <div class="col">%</div>
+                <div class="col">%</div>
+                <div class="col">#</div>
+                <div class="col">&</div>
+                <div class="col">@</div>
+              </div>
+              <div class="row" id="emoji">
+                <div class="col">5°C</div>
+                <div class="col">5°C</div>
+                <div class="col">5°C</div>
+                <div class="col">5°C</div>
+                <div class="col">5°C</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-3">
-          <input class="submit btn btn-success" value="Search" />
-        </div>
-      </div>
-      <h1>Turin</h1>
-      <ul>
-        <li>Tuesday, 03/10/2023 3:08 pm</li>
-        <li>Cloudy</li>
-      </ul>
-      <div class="row">
-        <div class="col-3"><img src="#" alt="Icon" /></div>
-        <div class="col-3">25°C</div>
-        <div class="col-6">
-          <ul>
-            <li>Humidity: 55%</li>
-            <li>Wind: 1km/h</li>
-            <li>Precipitation: 17%</li>
-          </ul>
-        </div>
+        <small> Open-source code by Nati</small>
       </div>
     </div>
     <script src="src/app.js"></script>
