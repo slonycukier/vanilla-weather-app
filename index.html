@@ -13,61 +13,70 @@
     <link rel="stylesheet" href="src/style.css" />
     <title>Vanilla Weather App</title>
   </head>
+
   <body>
     <div class="container">
       <div class="weather-total">
-        <div class="weather-app">
-          <div class="border">
-            <div class="box-1">
-              <div class="row">
-                <div class="col-9">
-                  <input class="search" />
-                </div>
-                <div class="col-3">
-                  <button class="btn btn-success">Search</button>
-                </div>
+        <div class="border p-5 mb-3 text-dark shadow-sm">
+          <div class="weather-search">
+            <div class="row">
+              <div class="col-8 p-1">
+                <input
+                  type="search"
+                  placeholder="Enter a city.."
+                  class="form-control search-input"
+                />
+              </div>
+
+              <div class="col-2 p-1">
+                <button class="btn btn-outline-secondary">@</button>
+              </div>
+              <div class="col-2 p-1">
+                <button class="btn btn-outline-secondary">@</button>
               </div>
             </div>
-            <div class="box-2">
-              <h1>Turin</h1>
+          </div>
+          <h1>Brighton</h1>
+          <div class="row box-2">
+            <div class="col-6" id="date">
               <ul>
-                <li>Tuesday, 03/10/2023 3:08 pm</li>
+                <li>Tuesday 03/10/2023</li>
+                <li>3:08 pm</li>
                 <li>Cloudy</li>
               </ul>
-              <div class="row">
-                <div class="col-3"><img src="#" alt="Icon" /></div>
-                <div class="col-3">25°C</div>
-                <div class="col-6">
-                  <ul>
-                    <li>Humidity: 55%</li>
-                    <li>Wind: 1km/h</li>
-                    <li>Precipitation: 17%</li>
-                  </ul>
-                </div>
-              </div>
             </div>
-            <div class="box-3">
-              <div class="row">
-                <div class="col">Wed</div>
-                <div class="col">Thu</div>
-                <div class="col">Fri</div>
-                <div class="col">Sat</div>
-                <div class="col">Sun</div>
-              </div>
-              <div class="row" id="emoji">
-                <div class="col">%</div>
-                <div class="col">%</div>
-                <div class="col">#</div>
-                <div class="col">&</div>
-                <div class="col">@</div>
-              </div>
-              <div class="row" id="emoji">
-                <div class="col">5°C</div>
-                <div class="col">5°C</div>
-                <div class="col">5°C</div>
-                <div class="col">5°C</div>
-                <div class="col">5°C</div>
-              </div>
+            <div class="col-6"">
+            <ul>
+              <li>Humidity: 55%</li>
+              <li>Wind: 1km/h</li>
+            </ul>
+          </div>
+          <div class="temperature d-flex justify-content-center">
+            <span class="value">25</span>
+            <span class="unit">°C | F</span>
+          </div>
+          <hr />
+          <div class="box-3">
+            <div class="row">
+              <div class="col">Wed</div>
+              <div class="col">Thu</div>
+              <div class="col">Fri</div>
+              <div class="col">Sat</div>
+              <div class="col">Sun</div>
+            </div>
+            <div class="row" id="emoji">
+              <div class="col">%</div>
+              <div class="col">%</div>
+              <div class="col">#</div>
+              <div class="col">&</div>
+              <div class="col">@</div>
+            </div>
+            <div class="row" id="emoji">
+              <div class="col">5°C</div>
+              <div class="col">5°C</div>
+              <div class="col">5°C</div>
+              <div class="col">5°C</div>
+              <div class="col">5°C</div>
             </div>
           </div>
         </div>
