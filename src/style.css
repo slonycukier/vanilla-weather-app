@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/9a/Kuniyoshi_Utagawa%2C_Heavy_rain.jpg);
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/1280px-Monet_-_Impression%2C_Sunrise.jpg");
 }
 
 h1 {
@@ -12,11 +12,12 @@ h1 {
   max-width: 500px;
   margin: 20px auto;
   padding: 50px;
+  border-color: transparent;
 }
 .border {
   border-radius: 15px;
-  background-color: #fff;
-  opacity: 75%;
+  background-color: rgba(255, 255, 255, 0.35);
+  padding: 60px;
 }
 .col-8 {
   flex: 0 0 auto;
@@ -37,6 +38,7 @@ h1 {
 .temperature {
   text-align: center;
   margin-bottom: 25px;
+  
 }
 .value {
   font-size: 90px;
@@ -62,7 +64,10 @@ li {
   padding: 0;
 }
 
-
 #parameters {
   text-align: right;
+}
+
+small {
+  color: lightgrey;
 }
