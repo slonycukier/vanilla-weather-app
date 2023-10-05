@@ -11,13 +11,21 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,300&family=Open+Sans:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/91e77606af.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Vanilla Weather App</title>
   </head>
 
   <body>
     <div class="container">
       <div class="weather-total">
-        <div class="border">
+        <div class="border shadow-lg">
           <div class="weather-search">
             <div class="row">
               <div class="col-8 p-1">
@@ -27,31 +35,32 @@
                   class="form-control search-input"
                 />
               </div>
-
               <div class="col-2 p-1">
-                <button class="btn btn-outline-secondary">@</button>
+                <button class="btn btn-outline-secondary"><i class="fa-solid fa-magnifying-glass search-icon"></i></button>
               </div>
               <div class="col-2 p-1">
-                <button class="btn btn-outline-secondary">@</button>
+                <button class="btn btn-outline-secondary"><i class="fa-sharp fa-solid fa-map-pin"></i></button>
               </div>
             </div>
           </div>
-          <h1>Brighton</h1>
-          <div class="row box-2">
-            <div class="col-6" id="date">
+          <div class="data-display">
+            <h1>Brighton</h1>
+            <div class="row box-2">
+              <div class="col-6" id="date">
+                <ul>
+                  <li>Tuesday</li>
+                  <li>3:08 pm</li>
+                  <li>Cloudy</li>
+                </ul>
+              </div>
+              <div class="col-6" id="description">
               <ul>
-                <li>Tuesday 03/10/2023</li>
-                <li>3:08 pm</li>
-                <li>Cloudy</li>
+                <li>Humidity: 55%</li>
+                <li>Wind: 1km/h</li>
               </ul>
             </div>
-            <div class="col-6"">
-            <ul>
-              <li>Humidity: 55%</li>
-              <li>Wind: 1km/h</li>
-            </ul>
           </div>
-          <div class="temperature d-flex justify-content-center">
+          <div class="temperature d-flex">
             <span class="value">25</span>
             <span class="unit">°C | F</span>
           </div>
