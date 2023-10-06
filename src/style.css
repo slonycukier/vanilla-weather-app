@@ -1,11 +1,12 @@
-container {
-  width: 100%;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/2560px-Monet_-_Impression%2C_Sunrise.jpg");
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("../images/rain.jpeg");
   background-size: cover;
 }
 
@@ -17,7 +18,6 @@ h1 {
   margin-top: 20px;
   font-size: 40px;
   font-weight: 400;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .weather-total {
@@ -28,7 +28,7 @@ h1 {
 }
 .border {
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(191, 192, 192, 0.342);
   padding: 50px;
 }
 .col-8 {
@@ -36,6 +36,15 @@ h1 {
   width: 70%;
 }
 
+.col-8 input.form-control {
+  background-color: #fafafa;
+  color: #333;
+}
+.col-8 input.form-control:hover,
+.col-8 input.form-control:focus {
+  border-color: #e8e8e8;
+  box-shadow: none;
+}
 .col-2 {
   display: flex;
   flex: 0 0 auto;
@@ -47,17 +56,17 @@ h1 {
 .btn-outline-secondary {
   --bs-btn-color: #fff;
   --bs-btn-border-color: #fff;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #6c757d;
-  --bs-btn-hover-border-color: #6c757d;
+  --bs-btn-hover-color: #fafafa;
+  --bs-btn-hover-bg: #e8e8e8;
+  --bs-btn-hover-border-color: #e8e8e8;
   --bs-btn-focus-shadow-rgb: 108, 117, 125;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #6c757d;
-  --bs-btn-active-border-color: #6c757d;
+  --bs-btn-active-color: #fafafa;
+  --bs-btn-active-bg: #e8e8e8;
+  --bs-btn-active-border-color: #e8e8e8;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #6c757d;
+  --bs-btn-disabled-color: #e8e8e8;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #6c757d;
+  --bs-btn-disabled-border-color: #e8e8e8;
   --bs-gradient: none;
 }
 
@@ -72,8 +81,8 @@ h1 {
 
 .box-2 {
   margin-top: 20px;
-  font-size: 16px;
   margin-left: -9px;
+  font-size: 12px;
 }
 
 .temperature {
@@ -100,19 +109,23 @@ h1 {
 ul {
   margin: 0 0 20px 0;
   padding: 0;
-}
-
-li {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 small {
-  font-size: smaller;
+  font-size: 9px;
   box-shadow: 0;
 }
 
 hr {
+  color: #e8e8e8;
+}
+
+a {
   color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #e8e8e8;
+  text-decoration: underline;
 }
