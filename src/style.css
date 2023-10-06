@@ -1,3 +1,7 @@
+container {
+  width: 100%;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
@@ -13,14 +17,15 @@ h1 {
   margin-top: 20px;
   font-size: 40px;
   font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .weather-total {
   max-width: 500px;
+  min-width: 200px;
   margin: 20px auto;
   padding: 50px;
   border-color: transparent;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 .border {
   border-radius: 20px;
@@ -34,17 +39,27 @@ h1 {
 
 .col-2 {
   display: flex;
+  flex: 0 0 auto;
   width: 15%;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-outline-secondary {
-  --bs-btn-color: #lightgrey;
-  --bs-btn-border-color: lightgrey;
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: #fff;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #3e3f41;
-  --bs-btn-hover-border-color: transparent;
+  --bs-btn-hover-bg: #6c757d;
+  --bs-btn-hover-border-color: #6c757d;
+  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #6c757d;
+  --bs-btn-active-border-color: #6c757d;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #6c757d;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #6c757d;
+  --bs-gradient: none;
 }
 
 .data-display {
@@ -66,6 +81,8 @@ h1 {
   text-align: center;
   margin-bottom: 50px;
   margin-left: 100px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: 200;
 }
 .value {
   font-size: 90px;
