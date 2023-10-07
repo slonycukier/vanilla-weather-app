@@ -27,7 +27,7 @@
     <div class="container">
       <div class="weather-total">
         <div class="border shadow-lg">
-         <form id="search-city">
+          <form id="search-city">
             <div class="search">
               <div class="row">
                 <div class="col-8 p-1">
@@ -56,25 +56,31 @@
               </div>
             </div>
           </form>
-        <div class="data-display">
-          <h1 id="city">Brighton</h1>
-          <div class="row box-2">
-            <div class="col-6">
-              <ul>
-                <li><span id="date">Tuesday 03:08 </span></li>
-                <li><span id="description">Rainy </span></li>
-              </ul>
+          <div class="data-display">
+            <h1 id="city">Brighton</h1>
+            <div class="row box-2">
+              <div class="col-6">
+                <ul>
+                  <li><span id="date">Tuesday 03:08 </span></li>
+                  <li><span id="description">Rainy </span></li>
+                </ul>
+              </div>
+              <div class="col-6" id="condition">
+                <ul>
+                  <li>Humidity: <span id="hum"></span>%</li>
+                  <li>Wind: <span id="wind"></span> km/h</li>
+                </ul>
+              </div>
             </div>
-            <div class="col-6" id="condition">
-              <ul>
-                <li>Humidity: <span id="hum"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
-              </ul>
+            <div class="d-flex weather-temp" <div class="row">
+              <div class="col-6">
+                <img src="" alt="Icon" id="icon" />
+              </div>
+              <div class="col-6 temp-container">
+                <span class="value">25</span>
+                <span class="unit">°C | F</span>
+              </div>
             </div>
-          </div>
-          <div class="temperature d-flex">
-            <span class="value">25</span>
-            <span class="unit">°C | F</span>
           </div>
           <hr />
           <div class="box-3">
@@ -101,12 +107,12 @@
             </div>
           </div>
         </div>
+        <small>
+          <span>
+            <a href="#" target="_blank">Open-sourced code </a> by Nati
+          </span>
+        </small>
       </div>
-      <small>
-        This project was coded by Nati and is
-        <a href="#" target="_blank">open-sourced on GitHub</a> and
-        <a href="#" target="_blank">hosted on Netlify </a></small
-      >
     </div>
     <script src="src/app.js"></script>
   </body>
