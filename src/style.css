@@ -136,7 +136,7 @@ hr {
 small {
   display: flex;
   font-size: 9px;
-  justify-content: center;
+  justify-content: right;
   color: #e6e6e6;
 }
 
