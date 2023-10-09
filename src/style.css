@@ -108,6 +108,12 @@ h1 {
   top: -22px;
 }
 
+.temp-container .active {
+  color: #fff;
+  text-decoration: none;
+  cursor: default;
+}
+
 #icon {
   height: 100px;
   position: relative;
@@ -141,7 +147,7 @@ small {
 }
 
 a {
-  color: #e6e6e6;
+  color: lightgray;
   text-decoration: none;
 }
 a:hover {
