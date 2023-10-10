@@ -21,6 +21,46 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  return days[day];
+}
+
+function getForecast(coordinates) {
+  let apiKey = "ca0db41e2e878c74a1dfc7ffece370d4";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML += ` <div class="col-2">
+                <div class="weather-forecast-date">${formatDay(
+                  forecastDay.dt
+                )}</div>
+                <img src="https://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png" alt=""
+                    width="42px"/>
+                <span class="weather-forecast-temp"> ${Math.round(
+                  forecastDay.temp.day
+                )}°C </span>
+            </div>`;
+    }
+  });
+
+  forecastHTML += `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector(".value");
   let cityElement = document.querySelector("#city");
@@ -43,6 +83,8 @@ function displayTemperature(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -85,4 +127,4 @@ farLink.addEventListener("click", showFar);
 let celLink = document.querySelector("#cel");
 celLink.addEventListener("click", showCel);
 
-search("New York");
+search("Gdansk");

@@ -34,10 +34,10 @@ h1 {
   padding: 50px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-.col-8 {
+/* .col-8 {
   flex: 0 0 auto;
   width: 70%;
-}
+} */
 
 .col-8 input.form-control {
   background-color: #fff;
@@ -48,7 +48,7 @@ h1 {
   border-color: #e8e8e8;
   box-shadow: none;
 }
-.col-2 {
+#search-button {
   display: flex;
   flex: 0 0 auto;
   width: 15%;
@@ -121,11 +121,6 @@ h1 {
   left: 35px;
 }
 
-.box-3 {
-  text-align: center;
-  margin: 30px auto;
-}
-
 ul {
   margin: 0 0 20px 0;
   padding: 0;
@@ -139,6 +134,18 @@ hr {
   color: #e6e6e6;
 }
 
+#weather-forecast {
+  text-align: center;
+  margin: 50px 0 10px 0;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+}
+
+.weather-forecast-temp {
+  font-size: 14px;
+}
 small {
   display: flex;
   font-size: 9px;
