@@ -127,23 +127,6 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function showFar(event) {
-  event.preventDefault();
-  let farTemp = Math.round((celTemp * 9) / 5 + 32);
-  celLink.classList.remove("active");
-  farLink.classList.add("active");
-  let temperatureElement = document.querySelector(".value");
-  temperatureElement.innerHTML = farTemp;
-}
-
-function showCel(event) {
-  event.preventDefault();
-  celLink.classList.add("active");
-  farLink.classList.remove("active");
-  let temperatureElement = document.querySelector(".value");
-  temperatureElement.innerHTML = celTemp;
-}
-
 function getCurrentLocation(event) {
   event.preventDefault();
   if (navigator.geolocation) {
@@ -151,16 +134,8 @@ function getCurrentLocation(event) {
   }
 }
 
-let celTemp = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let farLink = document.querySelector("#far");
-farLink.addEventListener("click", showFar);
-
-let celLink = document.querySelector("#cel");
-celLink.addEventListener("click", showCel);
 
 let locationButton = document.querySelector("#current-location-button");
 locationButton.addEventListener("click", getCurrentLocation);
