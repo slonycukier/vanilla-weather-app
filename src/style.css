@@ -1,14 +1,31 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  background-image: radial-gradient(
-      circle at center,
-      rgba(255, 255, 255, 0) 40%,
-      rgba(0, 0, 0, 0.3) 100%
-    ),
-    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
-    url("../images/monet.jpeg");
   background-size: cover;
+}
+
+body.clear {
+  background-image: url(../images/monet.jpeg);
+}
+
+body.clouds {
+  background-image: url(../images/clouds.jpg);
+}
+
+body.rain {
+  background-image: url(../images/rain.jpeg);
+}
+
+body.thunderstorm {
+  background-image: url(../images/tempest.jpg);
+}
+
+body.mist {
+  background-image: url(../images/mist.jpg);
+}
+
+body.snow {
+  background-image: url(../images/snow.jpg);
 }
 
 :root {
@@ -30,14 +47,15 @@ h1 {
 }
 .border {
   border-radius: 20px;
-  background-color: rgba(220, 220, 220, 0.25);
+  background-color: rgba(220, 220, 220, 0.35);
   padding: 50px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
 }
-/* .col-8 {
+.col-8 {
   flex: 0 0 auto;
   width: 70%;
-} */
+}
 
 .col-8 input.form-control {
   background-color: #fff;
@@ -150,11 +168,11 @@ small {
   display: flex;
   font-size: 9px;
   justify-content: right;
-  color: #e6e6e6;
+  color: #fff;
 }
 
 a {
-  color: lightgray;
+  color: #fff;
   text-decoration: none;
 }
 a:hover {

@@ -69,6 +69,22 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+  let weatherDescription = response.data.weather[0].description;
+  let bodyElement = document.querySelector("body");
+
+  if (weatherDescription.includes("clear")) {
+    bodyElement.className = "clear";
+  } else if (weatherDescription.includes("rain")) {
+    bodyElement.className = "rain";
+  } else if (weatherDescription.includes("clouds")) {
+    bodyElement.className = "clouds";
+  } else if (weatherDescription.includes("snow")) {
+    bodyElement.className = "snow";
+  } else if (weatherDescription.includes("thunderstorm")) {
+    bodyElement.className = "thunderstorm";
+  } else if (weatherDescription.includes("mist")) {
+    bodyElement.className = "mist";
+  }
 
   celTemp = Math.round(response.data.main.temp);
 
@@ -91,6 +107,18 @@ function search(city) {
   let apiKey = "ca0db41e2e878c74a1dfc7ffece370d4";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
+}
+
+function retrieveWeatherForPosition(position) {
+  let apiKey = "ca0db41e2e878c74a1dfc7ffece370d4";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(function (response) {
+    displayTemperature(response);
+
+    let cityElement = document.querySelector("#city");
+    cityElement.innerHTML = response.data.name;
+  });
 }
 
 function handleSubmit(event) {
@@ -116,6 +144,13 @@ function showCel(event) {
   temperatureElement.innerHTML = celTemp;
 }
 
+function getCurrentLocation(event) {
+  event.preventDefault();
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(retrieveWeatherForPosition);
+  }
+}
+
 let celTemp = null;
 
 let form = document.querySelector("#search-form");
@@ -126,5 +161,8 @@ farLink.addEventListener("click", showFar);
 
 let celLink = document.querySelector("#cel");
 celLink.addEventListener("click", showCel);
+
+let locationButton = document.querySelector("#current-location-button");
+locationButton.addEventListener("click", getCurrentLocation);
 
 search("Gdansk");
